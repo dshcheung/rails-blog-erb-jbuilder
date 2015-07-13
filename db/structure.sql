@@ -51,6 +51,7 @@ CREATE TABLE articles (
     id integer NOT NULL,
     name character varying,
     content text,
+    data hstore,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL
 );

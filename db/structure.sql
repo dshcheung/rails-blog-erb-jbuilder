@@ -51,7 +51,6 @@ CREATE TABLE articles (
     id integer NOT NULL,
     name character varying,
     content text,
-    data hstore,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL
 );
@@ -113,5 +112,7 @@ CREATE UNIQUE INDEX unique_schema_migrations ON schema_migrations USING btree (v
 
 SET search_path TO "$user",public;
 
-INSERT INTO schema_migrations (version) VALUES ('20150713115544');
+INSERT INTO schema_migrations (version) VALUES ('20150713143717');
+
+INSERT INTO schema_migrations (version) VALUES ('20150713144216');
 

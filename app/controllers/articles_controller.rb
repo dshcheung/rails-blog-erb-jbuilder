@@ -4,7 +4,8 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all
+    # @articles = Article.all
+    @articles = controller_name.singularize.capitalize.constantize.all
   end
 
   # GET /articles/1
